@@ -1,4 +1,15 @@
 {
+  "env": {
+    "browser": true,
+    "es2020": true,
+    "node": true,
+    "jest": true
+  },
+  "settings": {
+    "react": {
+      "version": "detect"
+    }
+  },
   "extends": [
     "next/core-web-vitals",
     "plugin:@typescript-eslint/recommended"
