@@ -8,15 +8,15 @@
 <div align="center">
 
 [![Status](https://img.shields.io/badge/status-active-success.svg)]()
-[![GitHub Issues](https://img.shields.io/github/issues/kylelobo/The-Documentation-Compendium.svg)](https://github.com/kylelobo/The-Documentation-Compendium/issues)
-[![GitHub Pull Requests](https://img.shields.io/github/issues-pr/kylelobo/The-Documentation-Compendium.svg)](https://github.com/kylelobo/The-Documentation-Compendium/pulls)
+[![GitHub Issues](https://img.shields.io/github/issues/christiantld/boilerplate-next.svg)](https://github.com/christiantld/boilerplate-next/issues)
+[![GitHub Pull Requests](https://img.shields.io/github/issues-pr/christiantld/boilerplate-next.svg)](https://github.com/christiantld/boilerplate-next/issues)
 [![License](https://img.shields.io/badge/license-MIT-blue.svg)](/LICENSE)
 
 </div>
 
 ---
 
-<p align="center"> Few lines describing your project.
+<p align="center"> This boilerplate provides a set of extra configurations to start a Next.Js project.
     <br> 
 </p>
 
@@ -24,91 +24,89 @@
 
 - [About](#about)
 - [Getting Started](#getting_started)
-- [Deployment](#deployment)
+- [Tests](#tests)
 - [Usage](#usage)
+- [Deployment](#deployment)
 - [Built Using](#built_using)
 - [TODO](../TODO.md)
 - [Contributing](../CONTRIBUTING.md)
 - [Authors](#authors)
-- [Acknowledgments](#acknowledgement)
 
 ## 🧐 About <a name = "about"></a>
 
-Write about 1-2 paragraphs describing the purpose of your project.
+It includes:
+- Next.Js
+- Sass
+- Eslint and Prettier
+- Jest
+- Cypress
+- Git Hooks with Husky
+- Commit Lint + Pretty Quick
+- Plop component generator.
+- PR Template
+- This Readme template itself
 
 ## 🏁 Getting Started <a name = "getting_started"></a>
 
-These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See [deployment](#deployment) for notes on how to deploy the project on a live system.
-
-### Prerequisites
-
-What things you need to install the software and how to install them.
-
+How to use this boilerplate:
 ```
-Give examples
-```
-
-### Installing
-
-A step by step series of examples that tell you how to get a development env running.
-
-Say what the step will be
-
-```
-Give the example
+npx create-next-app@latest -e https://github.com/christiantld/boilerplate-next --use-npm
+# or
+yarn create next-app -e https://github.com/christiantld/boilerplate-next
+# or
+pnpm create next-app -e https://github.com/christiantld/boilerplate-next --use-pnpm
 ```
 
-And repeat
+After run one of the commands above, you will see a new folder called `boilerplate-next` in your current directory.
 
 ```
-until finished
-```
+cd boilerplate-next
 
-End with an example of getting some data out of the system or using it for a little demo.
+# here you should run using the corresponding package manager
+npm run development
+```
 
 ## 🔧 Running the tests <a name = "tests"></a>
 
-Explain how to run the automated tests for this system.
-
-### Break down into end to end tests
-
-Explain what these tests test and why
-
-```
-Give an example
-```
-
-### And coding style tests
-
-Explain what these tests test and why
-
-```
-Give an example
-```
-
 ## 🎈 Usage <a name="usage"></a>
 
-Add notes about how to use the system.
+### Scripts
+
+```
+  # start the server
+    "dev": "next dev",
+  # build for production
+    "build": "next build",
+  # start the server for production
+    "start": "next start",
+  # fix linting
+    "lint": "next lint",
+  # generate component.tsx, scss module and test file
+    "generate": "plop --plopfile ./generators/plopfile.js",
+  # runs unit test in watch mode
+    "test:unit": "jest --watch",
+  # runs cypress on window mode
+    "cypress": "cypress open",
+  # runs cypress on terminal mode
+    "cypress:headless": "cypress run --quiet",
+  # start server and runs cypress in window mode
+    "e2e": "start-server-and-test dev http://localhost:3000 cypress",
+    # start server and runs cypress in terminal mode
+    "e2e:headless": "start-server-and-test dev http://localhost:3000 cypress:headless",
+  # run on pre-commit routine
+    "test": "jest --passWithNoTests",
+  # run on pre-commit routine
+    "prepare": "husky install"
+```
 
 ## 🚀 Deployment <a name = "deployment"></a>
 
-Add additional notes about how to deploy this on a live system.
 
 ## ⛏️ Built Using <a name = "built_using"></a>
 
-- [MongoDB](https://www.mongodb.com/) - Database
-- [Express](https://expressjs.com/) - Server Framework
-- [VueJs](https://vuejs.org/) - Web Framework
-- [NodeJs](https://nodejs.org/en/) - Server Environment
-
 ## ✍️ Authors <a name = "authors"></a>
 
-- [@kylelobo](https://github.com/kylelobo) - Idea & Initial work
-
-See also the list of [contributors](https://github.com/kylelobo/The-Documentation-Compendium/contributors) who participated in this project.
-
-## 🎉 Acknowledgements <a name = "acknowledgement"></a>
-
-- Hat tip to anyone whose code was used
-- Inspiration
-- References
+- [@christiantld](https://github.com/christiantld)
+- [@italobarrosme](https://github.com/italobarrosme)
+- [@rodrigo-martins](https://github.com/rodrigo-martins)
+- [@tboerc](https://github.com/tboerc)
